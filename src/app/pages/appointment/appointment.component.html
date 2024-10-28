@@ -1,0 +1,44 @@
+<h6>View All Appointments</h6>
+<table mat-table [dataSource]="dataSource" matSort>
+
+  <!-- Doctor Column -->
+  <ng-container matColumnDef="doctor">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>Doctor</th>
+    <td mat-cell *matCellDef="let element">
+      <img [src]="element.doctorProfile" alt="Doctor Profile" class="avatar">
+      {{ element.doctorName }}
+    </td>
+  </ng-container>
+
+  <!-- Specialty Column -->
+  <ng-container matColumnDef="specialty">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>Specialty</th>
+    <td mat-cell *matCellDef="let element">{{ element.specialty }}</td>
+  </ng-container>
+
+  <!-- Patient Column -->
+  <ng-container matColumnDef="patient">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>Patient</th>
+    <td mat-cell *matCellDef="let element">
+      <img [src]="element.patientProfile" alt="Patient Profile" class="avatar">
+      {{ element.patientName }}
+    </td>
+  </ng-container>
+
+  <!-- Appointment Time Column -->
+  <ng-container matColumnDef="appointmentTime">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>Appointment Time</th>
+    <td mat-cell *matCellDef="let element">{{ element.appointmentTime }}</td>
+  </ng-container>
+
+  <!-- Amount Column -->
+  <ng-container matColumnDef="amount">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>Amount</th>
+    <td mat-cell *matCellDef="let element">{{ element.amount | currency:'INR':'symbol' }}</td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+
+<mat-paginator [pageSize]="10" showFirstLastButtons></mat-paginator>

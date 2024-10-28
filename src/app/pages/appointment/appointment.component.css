@@ -1,0 +1,7 @@
+.avatar {
+    width: 40px; /* Size of the avatar */
+    height: 40px; /* Size of the avatar */
+    border-radius: 50%; /* Make it round */
+    margin-right: 10px; /* Space between avatar and name */
+  }
+  

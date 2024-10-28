@@ -1,0 +1,7 @@
+<app-navbar (toggleSidebar)="toggleSidebar()"></app-navbar>
+<div class="dashboard-layout">
+  <app-dashboard-sidebar [open]="sidebarOpen"></app-dashboard-sidebar>
+  <div class="content-area" [class.sidebar-collapsed]="!sidebarOpen">
+    <router-outlet></router-outlet>
+  </div>
+</div>

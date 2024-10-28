@@ -1,0 +1,68 @@
+/* Navbar styling */
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.spacer {
+    flex: 1 1 auto;
+}
+
+/* User Menu styling */
+.user-menu {
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 99;
+}
+
+/* User Image and Avatar */
+.avatar-icon {
+    font-size: 30px; /* Size for the avatar icon */
+    color: black; /* Icon color */
+    
+}
+
+
+
+/* User Header */
+.user-header {
+    display: flex;
+    align-items: center;
+    padding: 10px; /* Padding for the user header */
+}
+
+/* User Text */
+.user-header h6 {
+    font-size: 20px;
+    margin: 0; /* Remove margin for the heading */
+}
+
+.user-header p {
+    margin: 0; /* Remove margin for the paragraph */
+    font-size: 14px; /* Adjust font size */
+    color: #6c757d; /* Grey color for the text */
+}
+
+/* Menu Item styling */
+.mat-menu-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px; /* Padding for menu items */
+}
+
+.mat-menu-item:hover {
+    background: #00d0f1; /* Background color on hover */
+    color: white; /* Text color on hover */
+}
+
+/* Additional styles to ensure good spacing and alignment */
+.mat-menu {
+    min-width: 200px; /* Minimum width for the dropdown menu */
+    padding: 0; /* Remove padding */
+}
+
+/* Icon styling */
+.mat-icon {
+    margin-right: 0; /* Space between icon and text */
+}
